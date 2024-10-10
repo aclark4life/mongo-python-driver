@@ -774,7 +774,7 @@ class IndexModel:
         return self.__document
 
     def __repr__(self) -> str:
-        return f"{self.__class__.__name__}({self.__document})"
+        return f"{self.__class__.__name__}({self.document})"
 
 
 class SearchIndexModel:

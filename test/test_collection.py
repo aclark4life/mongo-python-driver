@@ -2253,6 +2253,10 @@ class TestCollection(IntegrationTest):
         for helper, args in helpers:
             helper(*args, let={})  # type: ignore
 
+    def test_repr(self):
+        im = IndexModel("hello")
+        self.assertEqual(im.__repr__(), f"{im.__class__.__name__}({im.document})")
+
 
 if __name__ == "__main__":
     unittest.main()
